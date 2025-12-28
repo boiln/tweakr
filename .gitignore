@@ -1,5 +1,5 @@
 # Build outputs
-release/
+release/bin/
 
 # Editor and IDE files
 .vscode/
