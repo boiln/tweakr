@@ -278,5 +278,5 @@ Write-Host "  Output: $outputExe" -ForegroundColor Gray
 Write-Host "  Version: $Version" -ForegroundColor Gray
 Write-Host "  Size: $([math]::Round((Get-Item $outputExe).Length / 1KB, 1)) KB" -ForegroundColor Gray
 Write-Host ""
-Write-Host "$timeStr" -ForegroundColor DarkGray
+Write-Host "$timeStr" -ForegroundColor Green
 Write-Host ""
