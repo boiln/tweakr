@@ -485,7 +485,9 @@ $script:categories = [ordered]@{
         Color = $colors.CategoryUtil
         Apps  = @(
             @{Name = "WinSCP"; ID = "WinSCP.WinSCP"; Type = "winget"; Desc = "SFTP/FTP client" },
-            @{Name = "Wireshark"; ID = "WiresharkFoundation.Wireshark"; Type = "winget"; Desc = "Network analyzer" }
+            @{Name = "Wireshark"; ID = "WiresharkFoundation.Wireshark"; Type = "winget"; Desc = "Network analyzer" },
+            @{Name = "ShareX"; ID = "ShareX.ShareX"; Type = "winget"; Desc = "Screen capture & sharing" },
+            @{Name = "Syncthing"; ID = "Syncthing"; Type = "custom"; URL = "https://github.com/Bill-Stewart/SyncthingWindowsSetup/releases/download/v2.0.0/syncthing-windows-setup.exe"; Desc = "File synchronization" }
         )
     }
 }
