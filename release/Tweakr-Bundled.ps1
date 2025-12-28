@@ -1,7 +1,7 @@
-﻿
+
 if (-NOT ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) {
     Write-Warning "Please run this script as Administrator!"
-    Start-Process powershell.exe -ArgumentList "-NoProfile -ExecutionPolicy Bypass -File "D:\my-shit\a-tweakr\scripts\build.ps1"" -Verb RunAs
+    Start-Process powershell.exe -ArgumentList "-NoProfile -ExecutionPolicy Bypass -File "C:\Users\vr\workflow\tweakr\scripts\build.ps1"" -Verb RunAs
     exit
 }
 
@@ -819,6 +819,10 @@ $script:tweakFunctions = @{
 # === main.ps1 ===
 
 
+# Set UTF-8 encoding for proper Unicode output (winget progress bars, etc.)
+[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+$OutputEncoding = [System.Text.Encoding]::UTF8
+
 
 
 
@@ -1412,8 +1416,8 @@ $script:installButton.Add_Click({
             }
 
             try {
-                Write-Host "Running: winget install --id $($app.ID) --exact --silent" -ForegroundColor DarkGray
-                $result = winget install --id $app.ID --exact --silent --accept-package-agreements --accept-source-agreements 2>&1
+                Write-Host "Running: winget install --id $($app.ID) --exact --silent --source winget" -ForegroundColor DarkGray
+                $result = winget install --id $app.ID --exact --silent --accept-package-agreements --accept-source-agreements --source winget 2>&1
                 Write-Host $result -ForegroundColor Gray
 
                 if ($LASTEXITCODE -ne 0) {
@@ -1503,4 +1507,3 @@ $script:installButton.Add_Click({
     })
 
 [void]$form.ShowDialog()
-

@@ -193,7 +193,9 @@ if (-not (Test-Path $releaseDir)) {
 }
 
 if (-not $WhatIf) {
-    Set-Content $bundledScript $bundledContent -Encoding UTF8
+    # Use UTF8 without BOM for compatibility with irm | iex
+    $utf8NoBom = New-Object System.Text.UTF8Encoding $false
+    [System.IO.File]::WriteAllText($bundledScript, $bundledContent, $utf8NoBom)
 }
 
 Write-Host "  Created: release/Tweakr-Bundled.ps1" -ForegroundColor Green
