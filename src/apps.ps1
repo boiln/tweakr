@@ -37,7 +37,7 @@
     "Utilities"            = @{
         Color = $colors.CategoryUtil
         Apps  = @(
-            @{Name = "FileZilla"; ID = "TimKosse.FileZilla.Client"; Type = "winget"; Desc = "FTP client" },
+            @{Name = "WinSCP"; ID = "WinSCP.WinSCP"; Type = "winget"; Desc = "SFTP/FTP client" },
             @{Name = "Wireshark"; ID = "WiresharkFoundation.Wireshark"; Type = "winget"; Desc = "Network analyzer" }
         )
     }
