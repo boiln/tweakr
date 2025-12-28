@@ -7,6 +7,8 @@
 
 A modern Windows setup and tweaking tool built with PowerShell. Streamline your Windows installation with one-click application installs and system optimizations.
 
+https://github.com/user-attachments/assets/429f6443-1044-499b-aee7-129151d64fe9
+
 ## Features
 
 -   **Application Installer** - Install popular apps via winget with a clean GUI
@@ -73,29 +75,6 @@ irm https://raw.githubusercontent.com/boiln/tweakr/main/release/Tweakr-Bundled.p
 -   PowerShell 5.1+
 -   ps2exe module (auto-installed)
 -   PSScriptAnalyzer module (auto-installed)
-
-## Project Structure
-
-```
-tweakr/
-├── src/
-│   ├── main.ps1           # Entry point and UI layout
-│   ├── config.ps1         # Colors, fonts, and theme configuration
-│   ├── functions.ps1      # Utility functions (logging, registry)
-│   ├── ui-controls.ps1    # Custom UI components (toggles, scrollbars)
-│   ├── apps.ps1           # Application definitions
-│   └── tweaks.ps1         # Tweak definitions and implementations
-├── scripts/
-│   ├── build.ps1          # Build script for bundling and compiling
-│   └── ps-formatter.ps1
-├── README.md
-├── LICENSE
-└── .gitignore
-```
-
-## Screenshots
-
-_Coming soon_
 
 ## Contributing
 
